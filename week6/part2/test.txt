@@ -1,0 +1,51 @@
+1. Get the all employees
+2. GET /employees
+3. None
+4. [
+    {
+        "id": 1,
+        "name": "Bilbo Baggins"
+    },
+    {
+        "id": 2,
+        "name": "Frodo Baggins"
+    },
+    {
+        "id": 3,
+        "name": "Bilbo Baggins"
+    },
+    {
+        "id": 4,
+        "name": "Frodo Baggins"
+    }
+] (200 OK)
+
+1. Get the employee by id
+2. GET /employees/employee_id
+3. employee_id
+4. {
+    "id": 1,
+    "name": "Bilbo Baggins"
+} (200 OK)
+
+1. Update the employee by id
+2. PUT /update/employee_id
+3. employee_id
+4. {
+    "id": 4,
+    "name": "Frodo Bagins221"
+} (200 OK)
+
+1. Delete the employee by id
+2. DELETE /delete/employee_id
+3. employee_id
+4. deleted user with usr id 4 (200 OK)
+
+1. Create employee 
+2. POST /employees
+3. None
+4. {
+    "id": 5,
+    "name": "Tredo Baggins"
+} (200 OK)
+
