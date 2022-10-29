@@ -1,0 +1,268 @@
+1. Brief description (what it does and which requirement it fulfills)
+2. Path (including REST method)
+3. Parameters
+4. Response
+
+Employee
+
+1. Get all employees
+2. GET  http://localhost:8080/employees/all
+3. No parameters
+4. [
+    {
+        "id": 1,
+        "name": "Bilbo Baggins"
+    },
+    {
+        "id": 2,
+        "name": "Frodo Baggins"
+    },
+    {
+        "id": 3,
+        "name": "Bilbo Baggins"
+    },
+    {
+        "id": 5,
+        "name": "Tredo Baggins"
+    }
+]
+
+1. Get employee by id
+2. GET  http://localhost:8080/employees/1
+3. 1
+4. {
+    "id": 1,
+    "name": "Bilbo Baggins"
+}
+
+
+1. Add new data
+2. Post http://localhost:8080/employees/add
+3. {
+    "name": "Frodo Baggins2"
+}
+4. {
+    "id": 0,
+    "name": "Frodo Baggins2"
+}
+
+1. Edit data 
+2. PUT http://localhost:8080/employees/edit/3
+3.  {
+        "name": "Frodo Baggins3"
+    }
+4.  {
+        "name": "Frodo Baggins3"
+    }
+
+1. Delete an employee
+2. DELETE http://localhost:8080/employees/delete/3
+3.3
+4.200 ok
+deleted
+
+Customer
+
+1. Get all Customers
+2. GET  http://localhost:8080/customers/all
+3. No parameters
+4. [
+    {
+        "id": 7,
+        "name": "Janice B",
+        "phoneNumber": null
+    },
+    {
+        "id": 8,
+        "name": "Janice B",
+        "phoneNumber": "+54674567"
+    }
+]
+
+1. Get customer by id
+2. GET  http://localhost:8080/customer/8
+3. 8
+4. {
+    "id": 8,
+    "name": "Janice B",
+    "phoneNumber": "+54674567"
+}
+
+
+1. Add new customer
+2. Post http://localhost:8080/customer/add
+3. {
+    "name": "Janice B",
+    "phoneNumber": "+54674567"
+}
+4. {
+    "id": 0,
+    "name": "Janice B",
+    "phoneNumber": "+54674567"
+}
+
+1. Edit customer
+2. PUT http://localhost:8080/customer/edit/7
+3. {
+    "name": "Dan Frencis",
+    "phoneNumber": "+18774567"
+}
+4.  {
+    "id": 7,
+    "name": "Dan Frencis",
+    "phoneNumber": "+18774567"
+}
+
+1. Delete a customer
+2.DELETE http://localhost:8080/customer/delete/6
+3.6
+4.200 ok
+deleted
+
+
+Category
+
+1. Get all Categories
+2. GET  http://localhost:8080/categories/all
+3. No parameters
+4. [
+    {
+        "id": 9,
+        "name": "cake"
+    },
+    {
+        "id": 10,
+        "name": "pie"
+    },
+    {
+        "id": 11,
+        "name": "dessert"
+    }
+]
+
+1. Get category by id
+2. GET  http://localhost:8080/categories/10
+3. 10
+4. {
+        "id": 10,
+        "name": "pie"
+    }
+
+
+1. Add new category
+2. Post http://localhost:8080/categories/add
+3. {
+    "description": "cake"
+}
+4. {
+    "id": 0,
+    "description": "cake"
+}
+
+1. Edit categories
+2. PUT http://localhost:8080/categories/edit/9
+3. {
+    "description": "cake1"
+}
+4.  {
+    "id": 9,
+    "name": "cake1"
+}
+
+1. Delete a categories
+2.DELETE http://localhost:8080/categories/delete/11
+3.11
+4.200 ok
+deleted
+
+
+Product
+
+1. Get all Products
+2. GET  http://localhost:8080/products/all
+3. No parameters
+4. [
+    {
+        "id": 16,
+        "categoryId": 9,
+        "productName": "cake",
+        "weight": "900 g",
+        "cost": "890 som",
+        "category": {
+            "id": 9,
+            "name": "cake1"
+        }
+    }
+]
+
+1. Get Product by id
+2. GET  http://localhost:8080/products/16
+3. 16
+4. [
+    {
+        "id": 16,
+        "categoryId": 9,
+        "productName": "cake",
+        "weight": "900 g",
+        "cost": "890 som",
+        "category": {
+            "id": 9,
+            "name": "cake1"
+        }
+    }
+]
+
+1. Add new Product
+2. Post http://localhost:8080/products/add
+3. {  
+    "categoryId": {
+       "id": 9,
+       "description": "cake1"
+    },
+    "productName": "cake",
+    "weight": "900 g",
+    "cost": "890 som"
+}
+4. {
+    "id": 0,
+    "categoryId": {
+        "id": 9,
+        "name": null
+    },
+    "productName": "cake",
+    "weight": "900 g",
+    "cost": "890 som"
+}
+
+1. Edit Product
+2. PUT http://localhost:8080/products/edit/16
+3. {  
+    "categoryId": {
+       "id": 10,
+       "description": "pie"
+    },
+    "productName": "cake",
+    "weight": "900 g",
+    "cost": "890 som"
+}
+4.  {
+    "id": 16,
+    "categoryId": 10,
+    "productName": "cake",
+    "weight": "900 g",
+    "cost": "890 som",
+    "category": {
+        "id": 9,
+        "name": "cake1"
+    }
+}
+
+1. Delete a Product
+2.DELETE http://localhost:8080/products/delete/16
+3.16
+4.200 ok
+deleted
+
+
+
+
