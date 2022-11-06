@@ -1,0 +1,4 @@
+1. All api endpoints were accessible for every user
+(add authentication,authorization for users, add roles) 
+2. Passwords were not encoded 
+(password of user will be encoded)

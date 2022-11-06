@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <title>Cake Shop</title>
+</head>
+<body>
+<h1>Cake Shop</h1>
+<hr>
+<h4>Панель администратора</h4>
+<!--<table border="1">
+  <tr>
+    <th>Email</th>
+    <th>Номер телефона</th>
+    <th>Активность</th>
+    <th>Роли</th>
+    <th>Бан</th>
+    <th>Редактирование</th>
+    <th>Подробная информация</th>
+  </tr>
+  <tr th:each = "user: ${user}">
+    <th th:text="${user.email}"></th>
+    <th th:text="${user.phoneNumber}"></th>
+    <th th:switch="${user.active}">
+      <p th:case="'true'">true</p>
+      <p th:case="*">false</p>
+    </th>
+    <th th:switch="${user.role}">
+      <p th:case="'ADMIN'">ADMIN</p>
+      <p th:case="*">USER</p>
+    </th>
+    <td>
+      <form action="/admin/user/ban/${user.id}" method="post">
+        <input type="hidden" name="_csrf" value="${_csrf.token}">
+        <input type="submit" value="Бан">
+      </form>
+    </td>
+    <td><a href="/admin/user/edit/${user.id}">Редактировние</a></td>
+    <td><a href="/user/${user.id}">Подробная информация</a></td>
+  </tr>
+</table>-->
+</body>
+</html>
