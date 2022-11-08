@@ -1,4 +1,4 @@
-package com.begin.projectA;
+package com.begin.projectA.Exception;
 
 public class EmployeeNotFoundException extends RuntimeException {
 

@@ -1,5 +1,6 @@
-package com.begin.projectA;
+package com.begin.projectA.Exception;
 
+import com.begin.projectA.Exception.EmployeeNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.begin.projectA.Models;
+package com.begin.projectA.Entity;
 import java.util.Objects;
 import javax.persistence.*;
 import javax.persistence.GeneratedValue;
