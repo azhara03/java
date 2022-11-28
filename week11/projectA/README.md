@@ -4,11 +4,11 @@
 ```
     docker run -p 3309:3306 --name appdb -e MYSQL_ROOT_PASSWORD=user2003 -d mysql/mysql-server:5.7
 ```
-2. New proccess in DB
+2. Run new process in container
 ```
     docker exec -it appdb1 bash
 ```
-And in bash and in mysql
+And in bash
 ```
     mysql -uroot -p -A;
 ```
@@ -21,7 +21,7 @@ In mysql
 ```
     docker network create app-network
 ```
-4. Connect DB to network
+4. Connect DB container to network
 ```
     docker network connect app-network appdb1
 ```
