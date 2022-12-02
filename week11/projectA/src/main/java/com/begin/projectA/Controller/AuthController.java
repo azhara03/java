@@ -24,14 +24,7 @@ public class AuthController {
         this.userService = userService;
         this.jwtProvider = jwtProvider;
     }
-    @PostMapping("/registration")
-    public String createUser(User user, Model model) {
-        if (!userService.createUser(user)) {
-            model.addAttribute("errorMessage", "Пользователь с email: " + user.getEmail() + " уже существует");
-            return "registration";
-        }
-        return "redirect:/login";
-    }
+
     @PostMapping("/login")
     public AuthResponse login(AuthRequest request) {
         User user = userService.findByLoginAndPassword(request.getEmail(), request.getPassword());
