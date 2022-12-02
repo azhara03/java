@@ -1,0 +1,23 @@
+version: "3"
+services:
+  appdb1:
+    container_name: appdb1
+    image: mysql/mysql-server:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=user2003
+      - MYSQL_DATABASE=database2
+  apl:
+    container_name: apl
+    restart: always
+    build: .
+    ports:
+      - "8083:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://appdb1:3306/database2?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&autoReconnect=true&useSSL=false&severTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=user2003
+    depends_on:
+      - appdb1
+
+
