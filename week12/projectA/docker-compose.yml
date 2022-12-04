@@ -14,7 +14,7 @@ services:
     ports:
       - "8083:8080"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://appdb1:3306/database2?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&autoReconnect=true&useSSL=false&severTimezone=UTC
+      - SPRING_DATASOURCE_URL=jdbc:mysql://awseb-e-5khr8nbu26-stack-awsebrdsdatabase-hvyq0iqjkpjl.c7zzcxo8qfot.eu-central-1.rds.amazonaws.com:3306/ebdb
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=user2003
     depends_on:

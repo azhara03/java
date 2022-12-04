@@ -23,8 +23,7 @@ import java.util.List;
 public class UserController {
     @Autowired
     private final UserService userService;
-    @Autowired
-    private JwtProvider jwtProvider;
+
 
     @GetMapping("all")
     public List<User> getAll(){
